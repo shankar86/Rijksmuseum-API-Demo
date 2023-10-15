@@ -15,6 +15,7 @@ Feature: Rijksmuseum API's Test
     And Verify response must have value 'artObjects'
     And Verify response must have value 'facets'
     And Verify responseBody must have link 'http://www.rijksmuseum.nl/api/nl/collection/SK-C-5' and objectNumber 'SK-C-5'
+    And Verify responseBody must have link 'http://www.rijksmuseum.nl/api/nl/collection/SK-C-597' and objectNumber 'SK-C-597'
 
   Scenario: TestCase-2 Verify HTTP 401 Response for Collection API for Rijksmuseum when api-key in invalid
     Given CollectionAPI resource url
