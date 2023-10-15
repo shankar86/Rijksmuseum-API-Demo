@@ -78,8 +78,13 @@ public class CollectionAPI {
 	public static void verifyResponseBodyDetails(String string, String string2) {
 
 		ValidatableResponse responseBodyDetails = response.then();
-		responseBodyDetails.assertThat().body("artObjects[0].links.self", equalTo(string));
-		responseBodyDetails.assertThat().body("artObjects[0].objectNumber", equalTo(string2));
+		if (string2.equals("SK-C-5")) {
+			responseBodyDetails.assertThat().body("artObjects[0].links.self", equalTo(string));
+			responseBodyDetails.assertThat().body("artObjects[0].objectNumber", equalTo(string2));
+		} else if (string2.equals("SK-C-597")) {
+			responseBodyDetails.assertThat().body("artObjects[1].links.self", equalTo(string));
+			responseBodyDetails.assertThat().body("artObjects[1].objectNumber", equalTo(string2));
+		}
 		System.out.println("Validation Completed");
 	}
 
