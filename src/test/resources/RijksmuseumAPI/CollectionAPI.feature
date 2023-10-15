@@ -1,5 +1,5 @@
 #Author: Shankaragouda Patil
-@shan
+@shan @test
 Feature: Rijksmuseum API's Test
 
   Scenario: TestCase-1 Verify HTTP 200 Response for Collection API for Rijksmuseum
